@@ -1,0 +1,99 @@
+/*-------------------------------------------------------------------------------------*/
+html{
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+    color: #1d1d1d;
+    font-size: 50px;
+}
+.dropdown-menu a{
+    font-size: 15px;
+}
+p{
+    font-size: 20px;
+}
+h2{
+    font-size: 2vw;
+}
+.secciones{
+    width: 100%;
+    height: 100vh;
+}
+.forma{
+    width: 12vw;
+    height: 12vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #9c007a, #9b01af 60%, #660185);
+    animation: levitar 4s forwards infinite;
+}
+.forma:hover{
+    box-shadow:0 0 30px #9c007a;
+}
+
+#forma1{
+    top: -60px;
+    left: 500px;
+}
+#forma2{    
+    top: 600px;
+    right: 500px;
+
+}
+#forma3{
+    top: 450px;
+    left: 300px;
+
+}
+#forma4{
+    top: 200px;
+    right: 300px;
+}
+.carousel{
+    width: 30vw;
+}
+/*-------------------------------------------------------------------------------------*/
+@keyframes levitar{
+    0%{
+        transform: translateY(0px); 
+    }
+    50%{
+        transform: translateY(30px); 
+    }
+    100%{
+        transform: translateY(0px); 
+    }
+}
+/*-------------------------------------------------------------------------------------*/
+@media (max-width: 600px){
+    .navbar{
+        background-color: #ffffff;
+    }
+    .forma{
+        display: none;
+    }
+    .conte-degradado{
+        background-color: #ffffff;
+    }
+    #seccion2, #seccion3{
+        flex-direction: column;
+    }
+    .carousel{
+        position: absolute;
+        width: 100vw;
+        opacity: 0.9;
+        z-index: 3;
+    }
+    .carousel h2{
+        color: #ffffff;
+        position: absolute;
+        font-size: 70px;
+        z-index: 4;
+    }
+}
